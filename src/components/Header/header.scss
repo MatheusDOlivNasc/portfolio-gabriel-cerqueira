@@ -1,0 +1,129 @@
+@import '../../style';
+
+header {
+  display: flex;
+  padding: 20px;
+  z-index: 10000000;
+  @include transition(fast, ease-out);
+  .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include transition();
+    img {
+      max-width: 100%;
+      min-height: 30px;
+      max-height: 100%;
+    }
+  }
+  .spacer {
+    flex: 1;
+  }
+  .side-bar {
+    padding: 0;
+    margin: 0;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+    @include transition();
+    z-index: 10000000 !important;
+    li {
+      list-style: none;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      padding: 5px 15px;
+      vertical-align: middle;
+      a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 22px;
+        img {
+          height: 20px;
+        }
+      }
+    }
+    @media screen and (min-width: $tablet) {
+      margin-right: 0 !important;
+    }
+    @media screen and (max-width: $tablet) {
+      display: none;
+      opacity: 0;
+      z-index: -1;
+      li {
+        a {
+          font-size: 42px;
+          img {
+            height: 40px;
+          }
+        }
+      }
+    }
+  }
+  @media screen and (min-width: $tablet) {
+    padding: 20px 70px;
+  }
+}
+
+.side-btn {
+  padding: 0px !important;
+  @include transition();
+
+  .btn-side {
+    background-color: black;
+    color: $primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 0;
+    padding: 5px;
+    box-shadow: 0 0 5px 2px rgba(0,0,0,0.2) ;
+    border-radius: 100%;
+  }
+  &.close {
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 5px;
+  }
+  @media screen and (min-width: $tablet) {
+    display: none !important;
+  }
+  @media screen and (max-width: $tablet) {
+    display: block !important;
+  }
+}
+
+.nav-bar {
+  @media screen and (max-width: $tablet) {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: $secondary;
+    z-index: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .logo {
+      position: absolute;
+      top: 21px;
+      left: 20px;
+    }
+    .side-btn {
+      position: absolute;
+      right: 20px;
+      top: 20px;
+    }
+    .side-bar {
+      opacity: 1;
+      z-index: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      align-items: flex-end;
+
+      text-align: right;
+    }
+  }
+}

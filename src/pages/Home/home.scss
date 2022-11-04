@@ -1,0 +1,43 @@
+@import '../../style';
+
+.preview-list {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  li {
+    list-style: none;
+    display: inline-block;
+    vertical-align: middle;
+    justify-content: center;
+    align-items: center;
+    width: 24.65vw;
+    margin: 0;
+    padding: 0;
+    height: 24.65vw;
+    a {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+      width: 100%;
+      img {
+        width: auto;
+        height: auto;
+        height: 105%;
+        @include transition();
+        &:hover {
+          height: 120%;
+        }
+      }
+    }
+    @media screen and (max-width: $tablet) {
+      width: 33.33vw;
+      height: 33.33vw;
+    }
+    @media screen and (max-width: $phone) {
+      width: 49.7vw;
+      height: 49.7vw;
+    }
+  }
+}

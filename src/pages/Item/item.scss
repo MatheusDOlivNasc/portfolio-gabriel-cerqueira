@@ -1,0 +1,14 @@
+@import '../../style';
+
+.images {
+    width: 100%;
+    margin: 10px auto;
+    li {
+        margin: 2px 0;
+        width: 100%;
+        list-style: none;
+        img {
+            width: 100%;
+        }
+    }
+}

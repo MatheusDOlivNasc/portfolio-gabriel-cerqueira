@@ -1,0 +1,21 @@
+@import '../../style';
+
+.contact-list {
+  text-align: left;
+
+  li {
+    padding: 10px;
+    list-style: none;
+    h2 {
+      font-size: 14pt;
+    }
+
+    p {
+      font-size: 14pt;
+    }
+  }
+}
+.contact-list, form {
+  flex: 1;
+  padding: 5px;
+}

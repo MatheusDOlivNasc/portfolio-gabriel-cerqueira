@@ -1,0 +1,36 @@
+@import '../../style';
+
+div {
+  h1 {
+    text-align: center;
+  }
+  .content {
+    display: flex;
+    width: 100%;
+    .img {
+      flex: 1;
+      overflow: hidden;
+      padding: 10px;
+      max-height: 500px;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      img {
+        min-width: 100%;
+        min-height: 100%;
+      }
+    }
+    .description {
+      flex: 1;
+      padding: 10px;
+      text-align: left;
+    }
+    @media screen and (max-width: $desktop){
+      flex-direction: column;
+      .img {
+        max-height: 300px;
+      }
+    }
+  }
+}
